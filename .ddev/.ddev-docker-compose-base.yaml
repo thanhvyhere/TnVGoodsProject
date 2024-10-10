@@ -121,6 +121,7 @@ services:
       - .:/mnt/ddev_config:ro
       - ./xhprof:/usr/local/bin/xhprof:ro
       - D:\StudyHK1_2024\mystore/web/sites/default/files:/var/www/html/web/sites/default/files:rw
+      - ../.git:/var/www/html/.git:rw
       - ddev-global-cache:/mnt/ddev-global-cache
       - ddev-ssh-agent_socket_dir:/home/.ssh-agent
 
