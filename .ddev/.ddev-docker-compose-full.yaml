@@ -22,7 +22,7 @@ services:
         command: []
         container_name: ddev-tnvGoodsProject-db
         environment:
-            COLUMNS: "72"
+            COLUMNS: "178"
             DDEV_DATABASE: mariadb:10.11
             DDEV_DATABASE_FAMILY: mysql
             DDEV_HOSTNAME: tnvgoodsproject.ddev.site
@@ -71,7 +71,6 @@ services:
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
-              published: "51290"
               target: 3306
         restart: "no"
         stop_grace_period: 1m0s
@@ -114,7 +113,7 @@ services:
             - /pre-start.sh
         container_name: ddev-tnvGoodsProject-web
         environment:
-            COLUMNS: "72"
+            COLUMNS: "178"
             COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
             COREPACK_HOME: /mnt/ddev-global-cache/corepack
             DDEV_COMPOSER_ROOT: /var/www/html
@@ -184,12 +183,10 @@ services:
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
-              published: "51289"
               target: 80
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
-              published: "51288"
               target: 443
         restart: "no"
         user: 1000:1000
