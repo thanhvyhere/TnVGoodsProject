@@ -1,0 +1,502 @@
+failed to get console mode for stdout: The handle is invalid.
+[
+    {
+        "Id": "0cac532f8f618813e2ea3ad076334d54c6a0f7296722363c21c6fd2f969c828b",
+        "Created": "2024-10-10T11:58:15.374217686Z",
+        "Path": "/pre-start.sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1765,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-10-10T11:58:16.654530586Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2024-10-10T12:12:44.57756376Z",
+                        "End": "2024-10-10T12:12:45.289858238Z",
+                        "ExitCode": 1,
+                        "Output": "/var/www/html:OK mailpit:FAILED phpstatus:FAILED "
+                    },
+                    {
+                        "Start": "2024-10-10T12:12:46.290788498Z",
+                        "End": "2024-10-10T12:12:46.983594424Z",
+                        "ExitCode": 0,
+                        "Output": "/var/www/html:OK mailpit:OK phpstatus:OK "
+                    },
+                    {
+                        "Start": "2024-10-10T12:12:47.984889922Z",
+                        "End": "2024-10-10T12:13:47.687411369Z",
+                        "ExitCode": 0,
+                        "Output": "container was previously healthy, so sleeping 59 seconds before continuing healthcheck... /var/www/html:OK mailpit:OK phpstatus:OK "
+                    },
+                    {
+                        "Start": "2024-10-10T12:13:48.688507896Z",
+                        "End": "2024-10-10T12:14:48.388178543Z",
+                        "ExitCode": 0,
+                        "Output": "container was previously healthy, so sleeping 59 seconds before continuing healthcheck... /var/www/html:OK mailpit:OK phpstatus:OK "
+                    },
+                    {
+                        "Start": "2024-10-10T12:14:49.406636093Z",
+                        "End": "2024-10-10T12:15:49.189998457Z",
+                        "ExitCode": 0,
+                        "Output": "container was previously healthy, so sleeping 59 seconds before continuing healthcheck... /var/www/html:OK mailpit:OK phpstatus:OK "
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:5612b9bf88cbf08e22461f98c60afd966b98bbc0d24ed3f939c25a10b5f2dc25",
+        "ResolvConfPath": "/var/lib/docker/containers/0cac532f8f618813e2ea3ad076334d54c6a0f7296722363c21c6fd2f969c828b/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/0cac532f8f618813e2ea3ad076334d54c6a0f7296722363c21c6fd2f969c828b/hostname",
+        "HostsPath": "/var/lib/docker/containers/0cac532f8f618813e2ea3ad076334d54c6a0f7296722363c21c6fd2f969c828b/hosts",
+        "LogPath": "/var/lib/docker/containers/0cac532f8f618813e2ea3ad076334d54c6a0f7296722363c21c6fd2f969c828b/0cac532f8f618813e2ea3ad076334d54c6a0f7296722363c21c6fd2f969c828b-json.log",
+        "Name": "/ddev-tnvGoodsProject-web",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": [
+            "93a63c6622149f95cc0e41075801280c08fd15eba310b95afcf7e4ce4da8cebb",
+            "3c078d45884ad719181902c31e34c0e51a56a80cd4c56dadbee51ab061046c40",
+            "99d23b80b5f80f409dbd2b5a9ebfb5a8bdd1ef7e630cd3c5e80a70f3b4035a49"
+        ],
+        "HostConfig": {
+            "Binds": [
+                "/d/StudyHK1_2024/mystore/.ddev:/mnt/ddev_config:ro",
+                "/d/StudyHK1_2024/mystore/.ddev/xhprof:/usr/local/bin/xhprof:ro",
+                "/d/StudyHK1_2024/mystore/web/sites/default/files:/var/www/html/web/sites/default/files:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "af7079fe9f8d082f532cbe22199c637c3ae087ab9874e31e8ef4b168d193e5f9",
+            "PortBindings": {
+                "443/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "0"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "0"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": [
+                "SYS_PTRACE"
+            ],
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "ddev-ssh-agent_socket_dir",
+                    "Target": "/home/.ssh-agent",
+                    "VolumeOptions": {}
+                },
+                {
+                    "Type": "volume",
+                    "Source": "tnvGoodsProject_project_mutagen",
+                    "Target": "/var/www",
+                    "VolumeOptions": {
+                        "NoCopy": true
+                    }
+                },
+                {
+                    "Type": "volume",
+                    "Source": "tnvGoodsProject_project_mutagen",
+                    "Target": "/tmp/project_mutagen",
+                    "VolumeOptions": {
+                        "NoCopy": true
+                    }
+                },
+                {
+                    "Type": "volume",
+                    "Source": "ddev-global-cache",
+                    "Target": "/mnt/ddev-global-cache",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/5525142e13ed6dbee4c55745a631fff8c46937a1689f0d0ba5e73d5b5266f493-init/diff:/var/lib/docker/overlay2/ycz7lx1umq64omgocvj9zmuyp/diff:/var/lib/docker/overlay2/z0k5wzx650z5rbn6gtugiy5fj/diff:/var/lib/docker/overlay2/5jiadvp4hy8bhvzyng5jqd9h2/diff:/var/lib/docker/overlay2/7cae90e2r48cdj251y8zqbsby/diff:/var/lib/docker/overlay2/5uofrrv4legj0dcyxpfyurx68/diff:/var/lib/docker/overlay2/m0sbrsbnmilujkjyt0swmer1i/diff:/var/lib/docker/overlay2/ags4ipq2y1fhgdnia011waey5/diff:/var/lib/docker/overlay2/7469521b4705da4ba14f3eee69d9079e1c14141e30e6d738a1ed7a7ecbf0e1a5/diff",
+                "MergedDir": "/var/lib/docker/overlay2/5525142e13ed6dbee4c55745a631fff8c46937a1689f0d0ba5e73d5b5266f493/merged",
+                "UpperDir": "/var/lib/docker/overlay2/5525142e13ed6dbee4c55745a631fff8c46937a1689f0d0ba5e73d5b5266f493/diff",
+                "WorkDir": "/var/lib/docker/overlay2/5525142e13ed6dbee4c55745a631fff8c46937a1689f0d0ba5e73d5b5266f493/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/d/StudyHK1_2024/mystore/.ddev/xhprof",
+                "Destination": "/usr/local/bin/xhprof",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/d/StudyHK1_2024/mystore/web/sites/default/files",
+                "Destination": "/var/www/html/web/sites/default/files",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "volume",
+                "Name": "ddev-ssh-agent_socket_dir",
+                "Source": "/var/lib/docker/volumes/ddev-ssh-agent_socket_dir/_data",
+                "Destination": "/home/.ssh-agent",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "tnvGoodsProject_project_mutagen",
+                "Source": "/var/lib/docker/volumes/tnvGoodsProject_project_mutagen/_data",
+                "Destination": "/var/www",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "tnvGoodsProject_project_mutagen",
+                "Source": "/var/lib/docker/volumes/tnvGoodsProject_project_mutagen/_data",
+                "Destination": "/tmp/project_mutagen",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ddev-global-cache",
+                "Source": "/var/lib/docker/volumes/ddev-global-cache/_data",
+                "Destination": "/mnt/ddev-global-cache",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/d/StudyHK1_2024/mystore/.ddev",
+                "Destination": "/mnt/ddev_config",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "tnvGoodsProject-web",
+            "Domainname": "",
+            "User": "1000:1000",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "443/tcp": {},
+                "80/tcp": {},
+                "8025/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DDEV_DATABASE=mariadb:10.11",
+                "DRUSH_OPTIONS_URI=http://tnvgoodsproject.ddev.site",
+                "HTTPS_EXPOSE=443:80,8026:8025",
+                "DDEV_PROJECT_TYPE=drupal8",
+                "PHP_IDE_CONFIG=serverName=tnvGoodsProject.ddev.site",
+                "PGDATABASE=db",
+                "COREPACK_ENABLE_DOWNLOAD_PROMPT=0",
+                "npm_config_cache=/mnt/ddev-global-cache/npm",
+                "DDEV_ROUTER_HTTP_PORT=80",
+                "DDEV_SITENAME=tnvGoodsProject",
+                "USER=dinht",
+                "DDEV_PHP_VERSION=8.3",
+                "TZ=",
+                "DRUSH_ALLOW_XDEBUG=1",
+                "DDEV_DOCROOT=web",
+                "PGUSER=db",
+                "PGHOST=db",
+                "GOOS=windows",
+                "PGPASSWORD=db",
+                "DDEV_WEBSERVER_TYPE=nginx-fpm",
+                "DDEV_DATABASE_FAMILY=mysql",
+                "IS_DDEV_PROJECT=true",
+                "LINES=41",
+                "DDEV_ROUTER_HTTPS_PORT=443",
+                "DDEV_VERSION=v1.23.4",
+                "MYSQL_PWD=db",
+                "HOST_DOCKER_INTERNAL_IP=",
+                "DDEV_COMPOSER_ROOT=/var/www/html",
+                "GOARCH=amd64",
+                "DDEV_HOSTNAME=tnvgoodsproject.ddev.site",
+                "DDEV_FILES_DIR=/var/www/html/web/sites/default/files",
+                "HTTP_EXPOSE=80:80,8025:8025",
+                "MYSQL_HISTFILE=/mnt/ddev-global-cache/mysqlhistory/tnvGoodsProject-web/mysql_history",
+                "DEPLOY_NAME=local",
+                "COREPACK_HOME=/mnt/ddev-global-cache/corepack",
+                "DDEV_TLD=ddev.site",
+                "DDEV_WEB_ENTRYPOINT=/mnt/ddev_config/web-entrypoint.d",
+                "DDEV_MUTAGEN_ENABLED=true",
+                "SSH_AUTH_SOCK=/home/.ssh-agent/socket",
+                "DDEV_PRIMARY_URL=http://tnvgoodsproject.ddev.site",
+                "DOCROOT=web",
+                "DOCKER_IP=127.0.0.1",
+                "NODE_EXTRA_CA_CERTS=/mnt/ddev-global-cache/mkcert/rootCA.pem",
+                "VIRTUAL_HOST=tnvgoodsproject.ddev.site",
+                "COLUMNS=76",
+                "DDEV_PROJECT=tnvGoodsProject",
+                "DDEV_FILES_DIRS=/var/www/html/web/sites/default/files",
+                "DDEV_XDEBUG_ENABLED=false",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "PHP_DEFAULT_VERSION=8.2",
+                "NGINX_SITE_TEMPLATE=/etc/nginx/nginx-site.conf",
+                "APACHE_SITE_TEMPLATE=/etc/apache2/apache-site.conf",
+                "TERMINUS_CACHE_DIR=/mnt/ddev-global-cache/terminus/cache",
+                "TERMINUS_HIDE_UPDATE_MESSAGE=1",
+                "CAROOT=/mnt/ddev-global-cache/mkcert",
+                "COMPOSER_ALLOW_SUPERUSER=1",
+                "COMPOSER_CACHE_DIR=/mnt/ddev-global-cache/composer",
+                "COMPOSER_PROCESS_TIMEOUT=2000",
+                "DEBIAN_FRONTEND=noninteractive",
+                "TERM=xterm",
+                "MH_SMTP_BIND_ADDR=127.0.0.1:1025",
+                "BASH_ENV=/etc/bash.nointeractive.bashrc",
+                "LANG=C.UTF-8",
+                "XHPROF_OUTPUT_DIR=/tmp/xhprof",
+                "PLATFORMSH_CLI_UPDATES_CHECK=0",
+                "NVM_DIR=/home/dinht/.nvm"
+            ],
+            "Cmd": [
+                "/pre-start.sh"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "/healthcheck.sh"
+                ],
+                "Interval": 1000000000,
+                "Timeout": 70000000000,
+                "StartPeriod": 240000000000,
+                "StartInterval": 1000000000,
+                "Retries": 70
+            },
+            "Image": "ddev/ddev-webserver:v1.23.4-tnvGoodsProject-built",
+            "Volumes": null,
+            "WorkingDir": "/var/www/html",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.ddev.app-type": "drupal8",
+                "com.ddev.approot": "D:\\StudyHK1_2024\\mystore",
+                "com.ddev.buildhost": "fv-az1052-626",
+                "com.ddev.platform": "ddev",
+                "com.ddev.site-name": "tnvGoodsProject",
+                "com.docker.compose.config-hash": "161f22c42c8054601abb652b1f9c97284c49f13e4fcb977a090fa0f68ffd1f39",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:5612b9bf88cbf08e22461f98c60afd966b98bbc0d24ed3f939c25a10b5f2dc25",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "ddev-tnvgoodsproject",
+                "com.docker.compose.project.config_files": "D:\\StudyHK1_2024\\mystore\\.ddev\\.ddev-docker-compose-full.yaml",
+                "com.docker.compose.project.working_dir": "D:\\StudyHK1_2024\\mystore\\.ddev",
+                "com.docker.compose.service": "web",
+                "com.docker.compose.version": "2.29.1"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "cc8daae2086f4a9d342677b0a1500cc12a3d7cedf84c1a6c6b33243ff757619f",
+            "SandboxKey": "/var/run/docker/netns/cc8daae2086f",
+            "Ports": {
+                "443/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "51288"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "51289"
+                    }
+                ],
+                "8025/tcp": null
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "ddev-tnvgoodsproject_default": {
+                    "IPAMConfig": null,
+                    "Links": [
+                        "ddev-router:tnvgoodsproject.ddev.site"
+                    ],
+                    "Aliases": [
+                        "ddev-tnvGoodsProject-web",
+                        "web",
+                        "0cac532f8f61",
+                        "tnvGoodsProject-web"
+                    ],
+                    "MacAddress": "02:42:ac:15:00:02",
+                    "NetworkID": "7a80fbe9569509c7704ba4ccfb22abc7f677edb2db6ef6625df5ae77ec4bc327",
+                    "EndpointID": "3380fe1b2b13e93d780174faf98a7b08fe99b084bcbd25ce8a08cbdb4230fc16",
+                    "Gateway": "172.21.0.1",
+                    "IPAddress": "172.21.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DriverOpts": null,
+                    "DNSNames": [
+                        "ddev-tnvGoodsProject-web",
+                        "web",
+                        "0cac532f8f61",
+                        "tnvGoodsProject-web"
+                    ]
+                },
+                "ddev_default": {
+                    "IPAMConfig": null,
+                    "Links": [
+                        "ddev-router:tnvgoodsproject.ddev.site"
+                    ],
+                    "Aliases": [
+                        "ddev-tnvGoodsProject-web",
+                        "web",
+                        "0cac532f8f61",
+                        "tnvGoodsProject-web"
+                    ],
+                    "MacAddress": "02:42:ac:12:00:03",
+                    "NetworkID": "af7079fe9f8d082f532cbe22199c637c3ae087ab9874e31e8ef4b168d193e5f9",
+                    "EndpointID": "9eebb7f93940ab4da051523c6ab48210387788f9c507ed23947670db6eba5537",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DriverOpts": null,
+                    "DNSNames": [
+                        "ddev-tnvGoodsProject-web",
+                        "web",
+                        "0cac532f8f61",
+                        "tnvGoodsProject-web"
+                    ]
+                }
+            }
+        }
+    }
+]
