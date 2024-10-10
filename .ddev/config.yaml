@@ -34,8 +34,8 @@ default_container_timeout: "240"
 # so this can break upgrades.
 
 # webimage: ./.ddev/.webimageBuild  # nginx/php docker image.
-webimage: "D:/StudyHK1_2024/mystore/.ddev/.webimageBuild"  # Nginx/PHP Docker image.
-dbimage: "D:/StudyHK1_2024/mystore/.ddev/dbimageBuild"
+webimage: .ddev/.dbimageBuild  # Nginx/PHP Docker image.
+dbimage: .ddev/dbimageBuild"
 
 # database:
 #   type: <dbtype> # mysql, mariadb, postgres
