@@ -26,8 +26,8 @@
 /providers/upsun.yaml
 /sequelpro.spf
 /settings/settings.ddev.py
-/traefik/config/tnvGoodsProject.yaml
-/traefik/certs/tnvGoodsProject.crt
-/traefik/certs/tnvGoodsProject.key
+/traefik/config/TnVGoodsStore.yaml
+/traefik/certs/TnVGoodsStore.crt
+/traefik/certs/TnVGoodsStore.key
 /xhprof/xhprof_prepend.php
 /**/README.*

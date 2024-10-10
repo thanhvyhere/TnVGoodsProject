@@ -32,7 +32,7 @@ services:
 
     # The postgres image is set up for user 999, we won't try to change that.
     user:  '$DDEV_UID:$DDEV_GID' 
-    hostname: tnvGoodsProject-db
+    hostname: TnVGoodsStore-db
     ports:
       - "127.0.0.1:$DDEV_HOST_DB_PORT:3306"
     labels:
@@ -127,7 +127,7 @@ services:
 
     restart: "no"
     user: '$DDEV_UID:$DDEV_GID'
-    hostname: tnvGoodsProject-web
+    hostname: TnVGoodsStore-web
 
     ports:
       - "127.0.0.1:$DDEV_HOST_HTTP_PORT:80"
@@ -199,7 +199,7 @@ services:
 
       
     external_links:
-      - "ddev-router:tnvgoodsproject.ddev.site"
+      - "ddev-router:tnvgoodsstore.ddev.site"
       
       
     healthcheck:
@@ -222,7 +222,7 @@ networks:
 volumes:
   
   database:
-    name: "tnvGoodsProject-mariadb"
+    name: "TnVGoodsStore-mariadb"
     external: true
    
 
@@ -239,7 +239,7 @@ volumes:
   
   
   project_mutagen:
-    name: tnvGoodsProject_project_mutagen
+    name: TnVGoodsStore_project_mutagen
     external: true
 
   

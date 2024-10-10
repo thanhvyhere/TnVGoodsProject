@@ -1,4 +1,4 @@
-name: ddev-tnvgoodsproject
+name: ddev-tnvgoodsstore
 networks:
     ddev_default:
         external: true
@@ -6,7 +6,7 @@ networks:
     default:
         labels:
             com.ddev.platform: ddev
-        name: ddev-tnvgoodsproject_default
+        name: ddev-tnvgoodsstore_default
 services:
     db:
         build:
@@ -20,19 +20,19 @@ services:
         cap_add:
             - SYS_NICE
         command: []
-        container_name: ddev-tnvGoodsProject-db
+        container_name: ddev-TnVGoodsStore-db
         environment:
-            COLUMNS: "178"
+            COLUMNS: "78"
             DDEV_DATABASE: mariadb:10.11
             DDEV_DATABASE_FAMILY: mysql
-            DDEV_HOSTNAME: tnvgoodsproject.ddev.site
+            DDEV_HOSTNAME: tnvgoodsstore.ddev.site
             DDEV_PHP_VERSION: "8.3"
-            DDEV_PRIMARY_URL: http://tnvgoodsproject.ddev.site
-            DDEV_PROJECT: tnvGoodsProject
+            DDEV_PRIMARY_URL: http://tnvgoodsstore.ddev.site
+            DDEV_PROJECT: TnVGoodsStore
             DDEV_PROJECT_TYPE: drupal8
             DDEV_ROUTER_HTTP_PORT: "80"
             DDEV_ROUTER_HTTPS_PORT: "443"
-            DDEV_SITENAME: tnvGoodsProject
+            DDEV_SITENAME: TnVGoodsStore
             DDEV_TLD: ddev.site
             DOCKER_IP: 127.0.0.1
             GOARCH: amd64
@@ -40,7 +40,7 @@ services:
             HOST_DOCKER_INTERNAL_IP: ""
             IS_DDEV_PROJECT: "true"
             LINES: "25"
-            MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/tnvGoodsProject-db/mysql_history
+            MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/TnVGoodsStore-db/mysql_history
             MYSQL_PWD: db
             PGDATABASE: db
             PGHOST: 127.0.0.1
@@ -57,13 +57,13 @@ services:
             start_interval: 1s
             start_period: 4m0s
             timeout: 1m10s
-        hostname: tnvGoodsProject-db
-        image: ddev/ddev-dbserver-mariadb-10.11:v1.23.4-tnvGoodsProject-built
+        hostname: TnVGoodsStore-db
+        image: ddev/ddev-dbserver-mariadb-10.11:v1.23.4-TnVGoodsStore-built
         labels:
             com.ddev.app-type: drupal8
             com.ddev.approot: D:\StudyHK1_2024\mystore
             com.ddev.platform: ddev
-            com.ddev.site-name: tnvGoodsProject
+            com.ddev.site-name: TnVGoodsStore
         networks:
             ddev_default: null
             default: null
@@ -99,7 +99,7 @@ services:
     web:
         build:
             args:
-                BASE_IMAGE: ddev/ddev-webserver:v1.23.4
+                BASE_IMAGE: ./.ddev/.webimageBuild
                 DDEV_DATABASE: mariadb:10.11
                 DDEV_PHP_VERSION: "8.3"
                 gid: "1000"
@@ -111,9 +111,9 @@ services:
             - SYS_PTRACE
         command:
             - /pre-start.sh
-        container_name: ddev-tnvGoodsProject-web
+        container_name: ddev-TnVGoodsStore-web
         environment:
-            COLUMNS: "178"
+            COLUMNS: "78"
             COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
             COREPACK_HOME: /mnt/ddev-global-cache/corepack
             DDEV_COMPOSER_ROOT: /var/www/html
@@ -122,15 +122,15 @@ services:
             DDEV_DOCROOT: web
             DDEV_FILES_DIR: /var/www/html/web/sites/default/files
             DDEV_FILES_DIRS: /var/www/html/web/sites/default/files
-            DDEV_HOSTNAME: tnvgoodsproject.ddev.site
+            DDEV_HOSTNAME: tnvgoodsstore.ddev.site
             DDEV_MUTAGEN_ENABLED: "true"
             DDEV_PHP_VERSION: "8.3"
-            DDEV_PRIMARY_URL: http://tnvgoodsproject.ddev.site
-            DDEV_PROJECT: tnvGoodsProject
+            DDEV_PRIMARY_URL: http://tnvgoodsstore.ddev.site
+            DDEV_PROJECT: TnVGoodsStore
             DDEV_PROJECT_TYPE: drupal8
             DDEV_ROUTER_HTTP_PORT: "80"
             DDEV_ROUTER_HTTPS_PORT: "443"
-            DDEV_SITENAME: tnvGoodsProject
+            DDEV_SITENAME: TnVGoodsStore
             DDEV_TLD: ddev.site
             DDEV_VERSION: v1.23.4
             DDEV_WEB_ENTRYPOINT: /mnt/ddev_config/web-entrypoint.d
@@ -140,7 +140,7 @@ services:
             DOCKER_IP: 127.0.0.1
             DOCROOT: web
             DRUSH_ALLOW_XDEBUG: "1"
-            DRUSH_OPTIONS_URI: http://tnvgoodsproject.ddev.site
+            DRUSH_OPTIONS_URI: http://tnvgoodsstore.ddev.site
             GOARCH: amd64
             GOOS: windows
             HOST_DOCKER_INTERNAL_IP: ""
@@ -148,34 +148,34 @@ services:
             HTTPS_EXPOSE: 443:80,8026:8025
             IS_DDEV_PROJECT: "true"
             LINES: "25"
-            MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/tnvGoodsProject-web/mysql_history
+            MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/TnVGoodsStore-web/mysql_history
             MYSQL_PWD: db
             NODE_EXTRA_CA_CERTS: /mnt/ddev-global-cache/mkcert/rootCA.pem
             PGDATABASE: db
             PGHOST: db
             PGPASSWORD: db
             PGUSER: db
-            PHP_IDE_CONFIG: serverName=tnvGoodsProject.ddev.site
+            PHP_IDE_CONFIG: serverName=TnVGoodsStore.ddev.site
             SSH_AUTH_SOCK: /home/.ssh-agent/socket
             TZ: ""
             USER: dinht
-            VIRTUAL_HOST: tnvgoodsproject.ddev.site
+            VIRTUAL_HOST: tnvgoodsstore.ddev.site
             npm_config_cache: /mnt/ddev-global-cache/npm
         external_links:
-            - ddev-router:tnvgoodsproject.ddev.site
+            - ddev-router:tnvgoodsstore.ddev.site
         healthcheck:
             interval: 1s
             retries: 70
             start_interval: 1s
             start_period: 4m0s
             timeout: 1m10s
-        hostname: tnvGoodsProject-web
-        image: ddev/ddev-webserver:v1.23.4-tnvGoodsProject-built
+        hostname: TnVGoodsStore-web
+        image: ./.ddev/.webimageBuild-TnVGoodsStore-built
         labels:
             com.ddev.app-type: drupal8
             com.ddev.approot: D:\StudyHK1_2024\mystore
             com.ddev.platform: ddev
-            com.ddev.site-name: tnvGoodsProject
+            com.ddev.site-name: TnVGoodsStore
         networks:
             ddev_default: null
             default: null
@@ -235,7 +235,7 @@ services:
 volumes:
     database:
         external: true
-        name: tnvGoodsProject-mariadb
+        name: TnVGoodsStore-mariadb
     ddev-global-cache:
         external: true
         name: ddev-global-cache
@@ -244,4 +244,4 @@ volumes:
         name: ddev-ssh-agent_socket_dir
     project_mutagen:
         external: true
-        name: tnvGoodsProject_project_mutagen
+        name: TnVGoodsStore_project_mutagen
