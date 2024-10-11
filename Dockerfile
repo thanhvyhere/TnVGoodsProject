@@ -18,11 +18,24 @@ RUN apt-get update && apt-get install -y \
 # Tải Composer và cài đặt vào Docker
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Cài đặt Drupal vào thư mục /var/www/html (thư mục chính của Apache)
+# Thiết lập DocumentRoot thành thư mục web của Drupal
+RUN sed -i 's|/var/www/html|/var/www/html/web|g' /etc/apache2/sites-available/000-default.conf
+
+# Bật các module Apache cần thiết
+RUN a2enmod rewrite
+
+# Cài đặt Drupal vào thư mục /var/www/html/web
 COPY . /var/www/html
 
 # Chỉnh quyền truy cập cho thư mục để phù hợp với Apache
-RUN chown -R www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
+
+# Tạo file .htaccess cho Apache nếu cần thiết (Drupal thường đi kèm với file này)
+RUN cp /var/www/html/web/.htaccess /var/www/html/.htaccess || true
 
 # Mở cổng 80 cho Apache
 EXPOSE 80
+
+# Khởi động Apache khi container chạy
+CMD ["apache2-foreground"]
