@@ -22,7 +22,7 @@ services:
         command: []
         container_name: ddev-TnVGoodsStore-db
         environment:
-            COLUMNS: "36"
+            COLUMNS: "55"
             DDEV_DATABASE: mariadb:10.11
             DDEV_DATABASE_FAMILY: mysql
             DDEV_HOSTNAME: tnvgoodsstore.ddev.site
@@ -39,7 +39,7 @@ services:
             GOOS: windows
             HOST_DOCKER_INTERNAL_IP: ""
             IS_DDEV_PROJECT: "true"
-            LINES: "29"
+            LINES: "12"
             MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/TnVGoodsStore-db/mysql_history
             MYSQL_PWD: db
             PGDATABASE: db
@@ -113,7 +113,7 @@ services:
             - /pre-start.sh
         container_name: ddev-TnVGoodsStore-web
         environment:
-            COLUMNS: "36"
+            COLUMNS: "55"
             COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
             COREPACK_HOME: /mnt/ddev-global-cache/corepack
             DDEV_COMPOSER_ROOT: /var/www/html
@@ -147,7 +147,7 @@ services:
             HTTP_EXPOSE: 80:80,8025:8025
             HTTPS_EXPOSE: 443:80,8026:8025
             IS_DDEV_PROJECT: "true"
-            LINES: "29"
+            LINES: "12"
             MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/TnVGoodsStore-web/mysql_history
             MYSQL_PWD: db
             NODE_EXTRA_CA_CERTS: /mnt/ddev-global-cache/mkcert/rootCA.pem
