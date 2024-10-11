@@ -39,7 +39,7 @@ services:
             GOOS: windows
             HOST_DOCKER_INTERNAL_IP: ""
             IS_DDEV_PROJECT: "true"
-            LINES: "25"
+            LINES: "13"
             MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/TnVGoodsStore-db/mysql_history
             MYSQL_PWD: db
             PGDATABASE: db
@@ -71,6 +71,7 @@ services:
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
+              published: "58935"
               target: 3306
         restart: "no"
         stop_grace_period: 1m0s
@@ -99,7 +100,7 @@ services:
     web:
         build:
             args:
-                BASE_IMAGE: ./.ddev/.webimageBuild
+                BASE_IMAGE: ddev/ddev-webserver:v1.23.4
                 DDEV_DATABASE: mariadb:10.11
                 DDEV_PHP_VERSION: "8.3"
                 gid: "1000"
@@ -147,7 +148,7 @@ services:
             HTTP_EXPOSE: 80:80,8025:8025
             HTTPS_EXPOSE: 443:80,8026:8025
             IS_DDEV_PROJECT: "true"
-            LINES: "25"
+            LINES: "13"
             MYSQL_HISTFILE: /mnt/ddev-global-cache/mysqlhistory/TnVGoodsStore-web/mysql_history
             MYSQL_PWD: db
             NODE_EXTRA_CA_CERTS: /mnt/ddev-global-cache/mkcert/rootCA.pem
@@ -170,7 +171,7 @@ services:
             start_period: 4m0s
             timeout: 1m10s
         hostname: TnVGoodsStore-web
-        image: ./.ddev/.webimageBuild-TnVGoodsStore-built
+        image: ddev/ddev-webserver:v1.23.4-TnVGoodsStore-built
         labels:
             com.ddev.app-type: drupal8
             com.ddev.approot: D:\StudyHK1_2024\mystore
@@ -183,10 +184,12 @@ services:
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
+              published: "58936"
               target: 80
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
+              published: "58937"
               target: 443
         restart: "no"
         user: 1000:1000
