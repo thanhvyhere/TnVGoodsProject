@@ -22,7 +22,7 @@ services:
         command: []
         container_name: ddev-TnVGoodsStore-db
         environment:
-            COLUMNS: "55"
+            COLUMNS: "71"
             DDEV_DATABASE: mariadb:10.11
             DDEV_DATABASE_FAMILY: mysql
             DDEV_HOSTNAME: tnvgoodsstore.ddev.site
@@ -113,7 +113,7 @@ services:
             - /pre-start.sh
         container_name: ddev-TnVGoodsStore-web
         environment:
-            COLUMNS: "55"
+            COLUMNS: "71"
             COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
             COREPACK_HOME: /mnt/ddev-global-cache/corepack
             DDEV_COMPOSER_ROOT: /var/www/html

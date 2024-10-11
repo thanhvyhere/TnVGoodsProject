@@ -23,7 +23,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . /var/www/html
 
 # Chạy composer install từ thư mục chứa composer.json
-RUN composer install --working-dir=/var/www/html
+RUN cd /var/www/html && composer install --no-interaction || { echo "Composer install failed"; exit 1; }
 
 # Đảm bảo các quyền truy cập đúng cho Apache
 RUN chown -R www-data:www-data /var/www/html
